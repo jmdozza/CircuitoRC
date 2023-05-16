@@ -4,7 +4,7 @@ import numpy as np
 
 usecols=["tc","Vc"]
 usecols2=["t","Vc"]
-datosCond1=pd.read_csv("serie1.csv",sep=";",decimal=",",header=1,usecols=usecols)
+datosCond1=pd.read_csv("cond2200.csv",sep=";",decimal=",",header=1,usecols=usecols)
 datosCond2=pd.read_csv("cond1000.csv",sep=";",decimal=",",header=1,usecols=usecols2)
 
 #POTENCIAL ELECTRICO EN LA CARGA DEL UN CONDENSADOR DE 2200microF

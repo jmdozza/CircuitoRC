@@ -5,7 +5,7 @@ import numpy as np
 usecols=["tc","Vc","td","Vd"]
 usecols2=["t","Vc","Vd"]
 usecols3=["t","Vc"]
-datosUno=pd.read_csv("serie1.csv",sep=";",decimal=",",header=1,usecols=usecols)
+datosUno=pd.read_csv("cond2200.csv",sep=";",decimal=",",header=1,usecols=usecols)
 datos_Serie=pd.read_csv("serie2.csv",sep=";",decimal=",",header=1,usecols=usecols2)
 datos_paralelos=pd.read_csv("paralelos.csv",sep=";",decimal=",",header=1,usecols=usecols3)
 
