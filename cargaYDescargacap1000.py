@@ -7,27 +7,27 @@ def funcion(t,m,v):
     return v*(np.exp(m*t))
 
 
-usecols1=["tc","Vc"]
-usecols2=["t","Vc"]
-datosCond1=pd.read_csv("cond2200.csv",sep=";",decimal=",",header=1,usecols=usecols1)
+usecols1=["t","Vc"]
+usecols2=["td","Vd"]
+datosCond1=pd.read_csv("cond1000.csv",sep=";",decimal=",",header=1,usecols=usecols1)
 datosCond2=pd.read_csv("cond1000.csv",sep=";",decimal=",",header=1,usecols=usecols2)
 
 
 #POTENCIAL ELECTRICO EN LA CARGA DEL UN CONDENSADOR DE 2200microF
 potentialC1=datosCond1["Vc"]
 #POTENCIAL ELECTRICO EN LA DESCARGA DE UN CONDENSADOR DE 1000microF
-potentialC2=datosCond2["Vc"]
+potentialC2=datosCond2["Vd"]
 
-timeC1=datosCond1["tc"]
-timeC2=datosCond2["t"]
+timeC1=datosCond1["t"]
+timeC2=datosCond2["td"]
 
 #SE CONFIGURA EL DIAGRAMA DE DISPERSION
 plt.ylabel("Potencial V (V)")
 plt.xlabel("Tiempo(s)")
 
-plt.title("Potencial eletrico medido en la resistencia (conectado en serie a un condensador)")
-plt.scatter(timeC1,potentialC1,c="r",label="Condensador 2200 microF")
-plt.scatter(timeC2,potentialC2,c="b",label="Condensador 1000 microF")
+plt.title("Potencial eletrico medido en la resistencia durante la carga y descarga de un condensador.")
+plt.scatter(timeC1,potentialC1,c="r",label="Carga Cond 1000 microF")
+plt.scatter(timeC2,potentialC2,c="b",label="Descarga Cond 1000 microF")
 
 
 #FIT CONDENSADOR 1
